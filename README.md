@@ -6,7 +6,7 @@ CloudShop is a modern, cloud-native e-commerce platform designed to provide a se
 
 ## Status
 
-**Under Construction**: CloudShop is in development, with Part 2 completed, focusing on the frontend with React for dynamic rendering and interactivity. Part 1 established the HTML structure, and Part 2 introduces React components, a dynamic product listing with filtering, and mobile menu interactivity. Future parts will add backend APIs, Azure Cosmos DB, and cloud deployment.
+**Under Construction**: CloudShop is in development, with Part 3 completed, focusing on the frontend with product detail pages and shopping cart functionality. Part 1 established the HTML structure, Part 2 introduced React components and product listing with filtering, and Part 3 adds dynamic product pages and cart management using React Context. Future parts will add backend APIs, Azure Cosmos DB, and cloud deployment.
 
 ## Project Scope
 
@@ -22,9 +22,10 @@ CloudShop will be developed in 10 parts, each building on the previous to create
    - Added interactivity for the mobile menu toggle.
    - Features: Grid-based product display, category filters, and responsive design.
 
-3. **Product Details and Cart**:
-   - Build product detail pages and a shopping cart with state management (e.g., Redux or React Context).
-   - Features: Product descriptions, image galleries, and cart persistence.
+3. **Product Details and Cart** (Completed):
+   - Added product detail pages with dynamic routing and shopping cart functionality.
+   - Used React Context for cart state management.
+   - Features: Product details (image, description, price), add/remove from cart, cart summary.
 
 4. **User Authentication (Frontend)**:
    - Develop login and registration UI with form validation and error handling.
@@ -59,26 +60,26 @@ CloudShop will be developed in 10 parts, each building on the previous to create
     - Implement testing (unit and integration) and analytics.
     - Features: SEO optimization, accessibility improvements, and user analytics.
 
-## Current Progress (Part 2)
+## Current Progress (Part 3)
 
 ### Description
 
-Part 2 introduces React for dynamic rendering and interactivity on the CloudShop frontend. The homepage is now rendered using React components, and a product listing page has been added with category-based filtering. The mobile menu is interactive, toggling visibility on click. The structure remains lightweight and optimized for Azure deployment.
+Part 3 enhances the frontend with product detail pages and shopping cart functionality. Product pages are accessible via dynamic routes (e.g., `/products/:id`), displaying details like name, price, category, description, and placeholder images. The cart is managed using React Context, allowing users to add and remove items. The frontend remains lightweight and optimized for Azure deployment.
 
 ### Files
 
-- `public/index.html`: Updated HTML to load React, React Router, and `app.js`.
-- `public/app.js`: React components for homepage, product listing, and navigation.
+- `public/index.html`: HTML to load React, React Router, and `app.js` (unchanged from Part 2).
+- `public/app.js`: Updated with product detail and cart components, plus React Context.
 - `README.md`: Project documentation (this file).
 
 ### Features
 
-- **React Components**: Modular components for header, hero, products, and footer.
-- **Dynamic Product Listing**: Displays products with filtering by category (e.g., Electronics, Clothing).
-- **Mobile Menu Toggle**: Interactive hamburger menu for mobile devices using React state.
+- **Product Detail Pages**: Dynamic routes (`/products/:id`) display product details with placeholder images.
+- **Shopping Cart**: Add/remove items with React Context, view cart with quantity and total price.
+- **Placeholder Images**: Used Placehold.co for product visuals, preparing for real images in backend integration.
 - **Responsive Design**: Tailwind CSS ensures a mobile-first layout with grid and flex utilities.
 - **Cloud-Ready**: Lightweight frontend optimized for Azure Static Web Apps or App Service.
-- **Professional Design**: Clean, well-documented code with modern UI to impress stakeholders.
+- **Professional Design**: Modular, well-documented code with modern UI to impress stakeholders.
 
 ### Setup Instructions
 
@@ -90,15 +91,17 @@ Part 2 introduces React for dynamic rendering and interactivity on the CloudShop
    http-server
    ```
 3. Open `http://localhost:8080` in a browser to test.
-4. Test interactivity:
-   - Click the hamburger menu on mobile to toggle the navigation.
-   - Navigate to the Products page and use category filters.
+4. Test functionality:
+   - Navigate to `/products` and click a product to view its detail page.
+   - Add items to the cart from product or detail pages; check cart count in the navbar.
+   - Visit `/cart` to view and remove items.
+   - Test mobile menu toggle on small screens.
 5. Validate HTML using [W3C Markup Validator](https://validator.w3.org/).
 6. Test responsiveness by resizing the browser window.
 7. Commit and push to GitHub:
    ```bash
    git add .
-   git commit -m "Part 2: Add React components and product listing with filtering"
+   git commit -m "Part 3: Add product detail pages and shopping cart with React Context"
    git push -u origin main
    ```
 
@@ -130,10 +133,10 @@ Part 2 introduces React for dynamic rendering and interactivity on the CloudShop
 CloudShop/
 ├── public/
 │   ├── index.html        # Homepage HTML (Part 1, updated in Part 2)
-│   ├── app.js            # React components (Part 2)
+│   ├── app.js            # React components (Part 2, updated in Part 3)
 │   ├── styles.css        # Placeholder for future custom CSS
 ├── src/
-│   ├── components/       # React components (Part 2+)
+│   ├── components/       # React components (Part 3+)
 ├── server/               # Backend (Part 5+)
 │   ├── server.js
 │   ├── routes/
